@@ -40,7 +40,7 @@ cell.barcodes.B <- paste0(seurat.obj.B$orig.ident, "_", cell.barcodes.B)
 seurat.obj.B <- RenameCells(seurat.obj.B, new.names = cell.barcodes.B)
 
 
-# Integration of T cells and BCR
+# Integration of B cell cluster and BCR
 integrated.obj.B <- combineExpression(combined.bcr, seurat.obj.B, 
                                         cloneCall = "gene", 
                                         proportion = FALSE, 
